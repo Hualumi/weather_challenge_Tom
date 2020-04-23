@@ -14,3 +14,4 @@ Using device location
 Note:
 Get device location not works on iOS simulator, works on Android
 Build and deploy successfully on iOS 13.4 and Android API 28
+Build agent: Visual Studio Community 2019 for Mac Version 8.5.3 (build 16)
