@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                x:Class="weather.Views.WeatherPage"
+                Title="Weather">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" x:Name="layout">
+        <Label TextColor="#77d065" Font="Bold,40" 
+                HorizontalOptions="FillAndExpand"  Text="{Binding Address}"
+                Margin="20,0,0,0"/>
+        <Label TextColor="#77d065" Font="Bold,35" 
+            HorizontalOptions="FillAndExpand"  Text="{Binding CurrentDay}"
+            Margin="20,0,0,0"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,10" BackgroundColor="Green" Padding="5,5,5,5">
+            <ffimageloading:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
+			    WidthRequest="200" HeightRequest="200"
+			    DownsampleToViewSize="true"
+                LoadingPlaceholder="loading"
+			    Source = "{Binding ImageUrl}">
+		    </ffimageloading:CachedImage>
+            <StackLayout Spacing="10">
+                <Label TextColor="#77d065" Font="Bold,40" 
+                HorizontalOptions="FillAndExpand"  VerticalOptions="CenterAndExpand"
+                Text="{Binding HighTemp}"
+                Margin="20,0,0,0"/>
+
+                <Label TextColor="#77d065" Font="Bold,40" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                Text="{Binding LowTemp}"
+                Margin="20,0,0,0"/>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
